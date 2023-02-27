@@ -1,0 +1,17 @@
+this program encrypt the password of any type 
+
+the process of encryption is given below :
+Basically this program is divided in the two parts one encryption part and decryption part 
+
+--------------------------------------Encrytion--------------------------------------------
+1. Firstly the program gets the file name name which contains the passwords
+2. it encryp the passwords based on the askii value 
+3. the program on plays with asski values 
+4. we can can the encryption algorithm by just changing the key value present in the program
+
+This is how the encryption algorthm works 
+
+-------------------------------------decryption--------------------------------------------
+1. Decryption algorith works exacly opposit of the encryption (this also takes the file name input)
+2. It just uses the key value and performs the reverse operation on the file provided.
+
