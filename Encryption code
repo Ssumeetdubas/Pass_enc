@@ -1,0 +1,64 @@
+-----------------------------------------------------------------------Part 1 Encryption--------------------------------------------------------------------------
+try:
+    file_char=[]
+    askii_list=[]
+
+    file_name=input("Enter the file name you want ot encript\n")
+
+    f=open(file_name, "r")
+
+    t=f.read(30000)
+    for i in t:
+        file_char.append(i)
+        askii_list.append(ord(i))
+
+    encoded_lis=[]
+
+    for i in askii_list:
+        t=i+5
+        encoded_lis.append(int(t))
+
+    enc_file=input(("Enter the file name to save the encryted file\n"))
+    try:
+        f1=open(enc_file,"w")
+        for j in encoded_lis:
+            f1.write(str(chr(j)))
+    except Exception as e:
+        print("error while writing to file\n")
+        print(e)
+
+except Exception as e:
+    print(e)
+
+---------------------------------------------------------------------Part 2 Decryption--------------------------------------------------------------------
+
+try:
+    dec_file=input("Enter the file name to decode the text\n")
+    f=open(dec_file, "r")
+    enc_char_lis=[]
+    for line in f:
+        for character in line:
+            enc_char_lis.append(character)
+
+    print(enc_char_lis)
+
+    askii_enc_lis=[]
+    for item in enc_char_lis:
+        askii_enc_lis.append(ord(item))
+    print(askii_enc_lis)
+
+    decoded_aski_ls=[]
+
+    for j in askii_enc_lis:
+        h=j-5
+        decoded_aski_ls.append(h)
+
+    save_file=input("Enter the filename by which you want to save the file \n")
+    l=open(save_file, "w")
+    for t in decoded_aski_ls:
+        a=chr(t)
+        l.write(a)
+
+except Exception as r:
+    print("Sorry tihs file cannot be decode due to incorrect security key or incorrect file name\n")
+    print(r)
